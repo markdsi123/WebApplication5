@@ -23,6 +23,13 @@ namespace WebApplication5.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult GetMyName()
+        {
+            var myName = new { Name = "Mark Dsilva" };
+            return Json(myName);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
